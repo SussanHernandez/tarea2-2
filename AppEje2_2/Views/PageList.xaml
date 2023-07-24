@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEje2_2.Views.PageList">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Ir a Búsqueda" Clicked="Button_Clicked" />
+            <ListView x:Name="listado"  HasUnevenRows="True" SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Id}" Margin="14" FontSize="18" IsVisible="true"/>
+                                    <Label Text="{Binding Title}" FontSize="18" />
+                                    <Label Text="{Binding Body}" FontSize="18" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
